@@ -8,7 +8,7 @@ Judgement criterion: two readers could come up with different values or boundari
 |---|---|---|
 | as much as possible, as far as possible | Does not say how far counts as passing | Write a lower bound: "≤ 300 characters", "at least 3 items" |
 | appropriate | Gives no range | "1–2 emoji per reply" |
-| reasonable | No basis for judgement | "The value matches item 2 of 【Fact Baseline】" |
+| reasonable | No basis for judgement | "The value matches item 2 of [Fact Baseline]" |
 | high quality, excellent | Quality has no metric | "0 typos; attach 1 source to each conclusion" |
 | fairly good, better | No comparison object and no gap | "More than 50% shorter than the original" |
 | when necessary | No trigger condition | "When the input exceeds 100 lines" |

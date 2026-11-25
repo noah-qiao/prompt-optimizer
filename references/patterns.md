@@ -20,9 +20,9 @@ Categories follow step 3 of the flow: classify into purpose/fact/assumption/conv
 
 | # | Defect | Bad example → fix |
 |---|---|---|
-| 8 | Assuming earlier turns are remembered〔built-in〕 | "Pick up from last time" → write every settled decision into 【Fact Baseline】 |
+| 8 | Assuming earlier turns are remembered〔built-in〕 | "Pick up from last time" → write every settled decision into [Fact Baseline] |
 | 9 | No scenario | "Write a cover letter" → "B2B finance PM role, 2 years of SWE moving into product, shipped 3 features" |
-| 10 | Tech stack drift | The new draft conflicts with the earlier choice → put the tech stack into 【Fact Baseline】 and then revise |
+| 10 | Tech stack drift | The new draft conflicts with the earlier choice → put the tech stack into [Fact Baseline] and then revise |
 | 11 | Inviting fabrication〔built-in〕 | "What do experts think of X" → "Write only what you are sure of; mark what you are unsure of as [Uncertain] and cite no sources" |
 | 12 | Unclear audience | "Write it for users" → "Non-technical B2B buyer, decision-making level" |
 | 13 | Not mentioning attempted approaches | (empty) → "X was tried and failed because of Y; do not suggest X again" |
@@ -33,7 +33,7 @@ Categories follow step 3 of the flow: classify into purpose/fact/assumption/conv
 |---|---|---|
 | 14 | No deliverable format | "Explain this concept" → "3 bullet points, each ≤20 characters, opening with a 1-sentence summary" |
 | 15 | Length left to guesswork〔built-in〕 | "Write a summary" → "The summary is exactly 3 sentences" |
-| 16 | Missing professional perspective | A professional task with no role → add 【Identity】 only when the role would change the result |
+| 16 | Missing professional perspective | A professional task with no role → add [Identity] only when the role would change the result |
 | 17 | Adjectives as standards〔built-in · vague-words〕 | "Make it more professional" → "Monochrome palette, body text 16px, line height 24px, no decorative elements" |
 | 18 | Image prompt without negative terms | "A portrait of a woman" → add "no watermark, no blur, no extra fingers, no text" |
 | 19 | Midjourney prompt written as a long sentence | A prose sentence → "subject, style, mood, lighting, composition, --ar 16:9 --v 6" |
@@ -55,8 +55,8 @@ Categories follow step 3 of the flow: classify into purpose/fact/assumption/conv
 |---|---|---|
 | 26 | No audit requirement | "Which option is better" → require the conclusion + assumptions + criteria + evidence + verification + residual uncertainty |
 | 27 | Asking to hide the chain of thought〔built-in〕 | "Show your thinking process" → delete it; instead ask for the conclusion, the basis, and the verification results |
-| 28 | Expecting cross-session memory〔built-in〕 | "You know my project" → resend 【Fact Baseline】 in every new session |
-| 29 | Conflict with earlier decisions | The new draft ignores the settled architecture → write the conflict into 【Fact Baseline】 and then revise |
+| 28 | Expecting cross-session memory〔built-in〕 | "You know my project" → resend [Fact Baseline] in every new session |
+| 29 | Conflict with earlier decisions | The new draft ignores the settled architecture → write the conflict into [Fact Baseline] and then revise |
 | 30 | Factual task without anchors | "Summarize what experts think of X" → "Write only what you are sure of; mark what you are unsure of as [Uncertain]" |
 
 ## Agent category
