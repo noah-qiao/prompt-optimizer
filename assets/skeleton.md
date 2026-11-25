@@ -1,92 +1,101 @@
-# 七段式提示词骨架
+# Seven-Section Prompt Skeleton
 
-空白模板：只含结构、规则与占位符。缺口识别时读「必要要素」找缺失项；组装时复制「占位符」块并替换 〈 〉 内的内容，成品不得残留 〈 〉。
+Blank template: contains only structure, rules, and placeholders. When identifying gaps, read "Required Elements" to find what is missing; when assembling, copy the "Placeholders" block and replace the content inside 〈 〉, and the deliverable must not retain 〈 〉.
 
-## 通用标注规则
+## General annotation rules
 
-- [假设]：草稿没有、由默认值补上。[用户确认]：弹窗选中或自填的内容。[未知]：既无来源也无默认值，不得编造。
-- 草稿没有的取值（数字、格式、对象、范围、工具）一律带标注，只重排已有信息不需标注。七段标题用中文原名，正文语言跟随草稿；一条内容只属于一段。
+- [Assumption]: absent from the draft and filled in with a default value. [User confirmed]: content selected in the popup or entered free-form. [Unknown]: neither a source nor a default value; must not be fabricated.
+- Any value absent from the draft (number, format, object, scope, tool) always carries an annotation, while merely reordering existing information needs none. The seven section headings use their original names and the body language follows the draft; one piece of content belongs to only one section.
 
 ---
 
-## 【身份】
+## Title line (first line of the block, not one of the seven sections)
 
-- 必要要素：执行者角色。本段答：谁来执行，能力与权限边界是什么？
-- 填写：一句话写角色，要能决定后续做法；边界只在去掉会改变结果时才写；可检查的红线归【硬性约束】。
-- 占位符：
+- Required elements: task summary. This line answers: what is this whole task about, in the fewest words?
+- Filling: 1 sentence, ≤30 characters, summarizing the object and the action of the whole task in the same language as the body, with no section name and no annotation; put it on the block's first line with 【Identity】 starting on the next line; the host takes it verbatim to generate the session title.
+- Placeholders:
   ```
-  【身份】
-  你是〈执行者角色〉。
-  能力与权限边界：〈可用输入、工具、知识范围；可做与不可做的动作〉。
+  〈task summary〉
   ```
 
-## 【目标】
+## 【Identity】
 
-- 必要要素：完成状态。本段答：完成后世界处于什么状态？
-- 填写：只写 1 句话，写状态不写动作；不含步骤和格式；不得更换草稿的对象。
-- 占位符：
+- Required elements: executor role. This section answers: who executes, and what are the capability and permission boundaries?
+- Filling: write the role in one sentence and make it able to determine what follows; write boundaries only when removing them would change the result; checkable red lines belong to 【Hard Constraints】.
+- Placeholders:
   ```
-  【目标】
-  〈对象〉达到〈可观察的状态〉。
-  ```
-
-## 【需求描述】
-
-- 必要要素：输入、场景。本段答：什么场景、什么输入下要什么？
-- 填写：只写场景、输入、期望，步骤归【任务详情】；场景写明使用者与时机；输入写明形态、语言、数量或长度范围。
-- 占位符：
-  ```
-  【需求描述】
-  - 场景：〈使用者〉在〈时机〉使用。
-  - 输入：〈形态〉；〈语言〉；〈数量或长度范围〉。
-  - 期望：〈要什么〉。
+  【Identity】
+  You are 〈executor role〉.
+  Capability and permission boundaries: 〈available inputs, tools, knowledge scope; actions allowed and not allowed〉.
   ```
 
-## 【事实基线】
+## 【Goal】
 
-- 必要要素：至少 1 条已确认事实，或明确标注“无已确认事实”。本段答：什么是真的，哪些待核实，哪些未知？
-- 填写：分已确认、待核实的假设、未知三块，不得混放；已确认的注明来源或以 [用户确认] 标注；待核实的写默认值并带 [假设]；未知的带 [未知]；不得编造版本号、数据、工具能力。
-- 占位符：
+- Required elements: completion state. This section answers: in what state is the world once it is done?
+- Filling: write only 1 sentence and state the state, not the action; include no steps or format; must not replace the draft's object.
+- Placeholders:
   ```
-  【事实基线】
-  已确认（不得更改）：
-  - 〈事实〉（来源：草稿）
-  待核实的假设（默认采用，与实际不符以实际为准）：
-  - 〈假设〉，默认值：〈默认值〉 [假设]
-  未知：
-  - [未知] 〈未知项〉
+  【Goal】
+  〈object〉 reaches 〈observable state〉.
   ```
 
-## 【任务详情】
+## 【Requirement Description】
 
-- 必要要素：步骤序列。本段答：怎么做？
-- 填写：每步＝动词＋对象＋完成标志，按顺序编号；每步所需输入都能在【需求描述】或【事实基线】找到；完成标志可单独判断；约束归【硬性约束】。
-- 占位符：
+- Required elements: input, scenario. This section answers: in what scenario and with what input is what needed?
+- Filling: write only the scenario, the input, and the expectation, with steps belonging to 【Task Details】; for the scenario state the user and the timing; for the input state the form, the language, and the quantity or length range.
+- Placeholders:
   ```
-  【任务详情】
-  1. 〈动词〉〈对象〉。完成标志：〈可检查的状态〉。
-  2. 〈动词〉〈对象〉。完成标志：〈可检查的状态〉。
-  ```
-
-## 【硬性约束】
-
-- 必要要素：至少 1 条带检查方式的约束。本段答：哪些线不能越过？
-- 填写：每条以 MUST 或 MUST NOT 开头，后接“检查：”；检查方式限于数量、格式、有/无、可复现步骤；约束来自草稿或带 [假设]；不含 references/vague-words.md 的词；不写步骤。
-- 占位符：
-  ```
-  【硬性约束】
-  - MUST：〈必须做到的事〉。检查：〈数量 / 格式 / 有无 / 可复现步骤〉。
-  - MUST NOT：〈不得出现的事〉。检查：〈数量 / 格式 / 有无 / 可复现步骤〉。
+  【Requirement Description】
+  - Scenario: used by 〈user〉 at 〈timing〉.
+  - Input: 〈form〉; 〈language〉; 〈quantity or length range〉.
+  - Expectation: 〈what is needed〉.
   ```
 
-## 【输出产物】
+## 【Fact Baseline】
 
-- 必要要素：格式、验收标准。本段答：交什么？
-- 填写：表格列出产物、格式、位置、验收标准，一个产物一行；位置写明对话回复内或文件路径；验收标准逐条可判定，用数量、格式、有/无或可复现步骤表达。
-- 占位符：
+- Required elements: at least 1 confirmed fact, or an explicit "no confirmed facts". This section answers: what is true, what still needs verification, and what is unknown?
+- Filling: use three blocks — confirmed, assumptions pending verification, unknown — and do not mix them; annotate confirmed items with their source or with [User confirmed]; write assumptions pending verification with a default value and [Assumption]; mark unknown items with [Unknown]; must not fabricate version numbers, data, or tool capabilities.
+- Placeholders:
   ```
-  【输出产物】
-  | 产物 | 格式 | 位置 | 验收标准 |
+  【Fact Baseline】
+  Confirmed (must not be changed):
+  - 〈fact〉 (source: draft)
+  Assumptions pending verification (adopted by default; if reality differs, reality wins):
+  - 〈assumption〉, default value: 〈default value〉 [Assumption]
+  Unknown:
+  - [Unknown] 〈unknown item〉
+  ```
+
+## 【Task Details】
+
+- Required elements: step sequence. This section answers: how is it done?
+- Filling: each step = verb + object + completion marker, numbered in order; every input a step needs can be found in 【Requirement Description】 or 【Fact Baseline】; a completion marker can be judged on its own; constraints belong to 【Hard Constraints】.
+- Placeholders:
+  ```
+  【Task Details】
+  1. 〈verb〉〈object〉. Completion marker: 〈checkable state〉.
+  2. 〈verb〉〈object〉. Completion marker: 〈checkable state〉.
+  ```
+
+## 【Hard Constraints】
+
+- Required elements: at least 1 constraint with a check. This section answers: which lines must not be crossed?
+- Filling: each item starts with MUST or MUST NOT followed by "Check:"; the check is limited to quantity, format, presence/absence, or reproducible steps; constraints come from the draft or carry [Assumption]; no words from references/vague-words.md; write no steps.
+- Placeholders:
+  ```
+  【Hard Constraints】
+  - MUST: 〈what must be done〉. Check: 〈quantity / format / presence-absence / reproducible steps〉.
+  - MUST NOT: 〈what must not appear〉. Check: 〈quantity / format / presence-absence / reproducible steps〉.
+  ```
+
+## 【Output Deliverables】
+
+- Required elements: format, acceptance criteria. This section answers: what is delivered?
+- Filling: list the deliverable, format, location, and acceptance criteria in a table, one deliverable per row; for the location state either inside the conversation reply or a file path; make the acceptance criteria judgeable one by one, expressed as quantity, format, presence/absence, or reproducible steps.
+- Placeholders:
+  ```
+  【Output Deliverables】
+  | Deliverable | Format | Location | Acceptance criteria |
   |---|---|---|---|
-  | 〈名称〉 | 〈格式〉 | 〈位置〉 | 〈可判定的标准〉 |
+  | 〈name〉 | 〈format〉 | 〈location〉 | 〈judgeable criterion〉 |
   ```

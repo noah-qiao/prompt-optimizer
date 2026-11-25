@@ -1,72 +1,72 @@
-# 草稿毛病对照表（37 条）
+# Draft Defect Reference Table (37 entries)
 
-诊断或修复草稿时读本表，只查与草稿毛病对应的分类，不要整篇套用。命中项按「坏例 → 改法」落进七段；标〔内建〕的毛病已由运行流程兜住，只需确认成品没复发，不必额外改写。
+Read this table when diagnosing or repairing a draft; look up only the category that matches the draft's defect, and do not apply the whole table. Put hit items into the seven sections according to "bad example → fix"; defects marked 〔built-in〕 are already covered by the run flow, so only confirm the deliverable has not regressed and no extra rewriting is needed.
 
-分类沿用流程第 3 步：能归目的/事实/假设/惯例/约束的先归类，再用本表校准改法。
+Categories follow step 3 of the flow: classify into purpose/fact/assumption/convention/constraint first, then use this table to calibrate the fix.
 
-## 任务类
+## Task category
 
-| # | 毛病 | 坏例 → 改法 |
+| # | Defect | Bad example → fix |
 |---|---|---|
-| 1 | 动词含糊 | 「帮我弄下代码」→「把 `getUserData()` 改为 async/await，null 返回不抛错」 |
-| 2 | 一稿多目标 | 「修登录并写销售邮件」→ 目标不同就拆成多份；共享验收标准才合并 |
-| 3 | 无完成标志〔内建〕 | 「做好一点」→「通过现有单测，null 输入不抛错」 |
-| 4 | 权限全开 | 「不惜代价搞定」→ 列允许动作与禁止动作两张清单 |
-| 5 | 情绪化描述〔内建〕 | 「全崩了，全修」→「第 43 行 `user` 为 null 时抛 TypeError」 |
-| 6 | 一口气造整站 | 「做我的整个 App」→ 拆成脚手架／核心功能／打磨三份 |
-| 7 | 隐式指代 | 「再加那个东西」→ 每次都完整重述任务，不引用「上次说的」 |
+| 1 | Vague verb | "Help me sort out the code" → "Change `getUserData()` to async/await so a null return does not throw" |
+| 2 | Multiple goals in one draft | "Fix login and write a sales email" → split into several drafts when the goals differ; merge only when acceptance criteria are shared |
+| 3 | No completion marker〔built-in〕 | "Make it a bit better" → "Pass the existing unit tests and do not throw on null input" |
+| 4 | Permissions fully open | "Get it done no matter the cost" → write two lists, allowed actions and forbidden actions |
+| 5 | Emotional description〔built-in〕 | "Everything blew up, fix it all" → "Throws TypeError on line 43 when `user` is null" |
+| 6 | Building the whole site in one breath | "Build my entire App" → split into three: scaffolding / core features / polish |
+| 7 | Implicit reference | "Add that thing again" → restate the task fully every time; do not refer to "what we said last time" |
 
-## 上下文类
+## Context category
 
-| # | 毛病 | 坏例 → 改法 |
+| # | Defect | Bad example → fix |
 |---|---|---|
-| 8 | 假设记得上文〔内建〕 | 「接着上次做」→【事实基线】写全已定决策 |
-| 9 | 无场景 | 「写封求职信」→「B2B 金融 PM 岗，2 年 SWE 转产品，带过 3 个特性」 |
-| 10 | 技术栈漂移 | 新稿与旧选型冲突 → 技术栈进【事实基线】再改 |
-| 11 | 邀请编造〔内建〕 | 「专家怎么看 X」→「只写有把握的；没把握标 [不确定]，不编来源」 |
-| 12 | 受众不明 | 「写给用户」→「非技术 B2B 采购，决策层」 |
-| 13 | 不提已试方案 | （空）→「已试 X 无效，原因是 Y，不要再建议 X」 |
+| 8 | Assuming earlier turns are remembered〔built-in〕 | "Pick up from last time" → write every settled decision into 【Fact Baseline】 |
+| 9 | No scenario | "Write a cover letter" → "B2B finance PM role, 2 years of SWE moving into product, shipped 3 features" |
+| 10 | Tech stack drift | The new draft conflicts with the earlier choice → put the tech stack into 【Fact Baseline】 and then revise |
+| 11 | Inviting fabrication〔built-in〕 | "What do experts think of X" → "Write only what you are sure of; mark what you are unsure of as [Uncertain] and cite no sources" |
+| 12 | Unclear audience | "Write it for users" → "Non-technical B2B buyer, decision-making level" |
+| 13 | Not mentioning attempted approaches | (empty) → "X was tried and failed because of Y; do not suggest X again" |
 
-## 格式类
+## Format category
 
-| # | 毛病 | 坏例 → 改法 |
+| # | Defect | Bad example → fix |
 |---|---|---|
-| 14 | 无产物格式 | 「解释这个概念」→「3 条要点，每条 ≤20 字，开头 1 句总结」 |
-| 15 | 长度靠猜〔内建〕 | 「写个摘要」→「摘要正好 3 句」 |
-| 16 | 缺专业视角 | 专业任务无角色 → 只在角色会改变结果时加【身份】 |
-| 17 | 形容词当标准〔内建·vague-words〕 | 「做得专业点」→「单色系，正文 16px，行高 24px，无装饰元素」 |
-| 18 | 图像无负面词 | 「一个女人的肖像」→ 补「无水印、无模糊、无多余手指、无文字」 |
-| 19 | Midjourney 写成长句 | 散文句 →「主体, 风格, 情绪, 光线, 构图, --ar 16:9 --v 6」 |
+| 14 | No deliverable format | "Explain this concept" → "3 bullet points, each ≤20 characters, opening with a 1-sentence summary" |
+| 15 | Length left to guesswork〔built-in〕 | "Write a summary" → "The summary is exactly 3 sentences" |
+| 16 | Missing professional perspective | A professional task with no role → add 【Identity】 only when the role would change the result |
+| 17 | Adjectives as standards〔built-in · vague-words〕 | "Make it more professional" → "Monochrome palette, body text 16px, line height 24px, no decorative elements" |
+| 18 | Image prompt without negative terms | "A portrait of a woman" → add "no watermark, no blur, no extra fingers, no text" |
+| 19 | Midjourney prompt written as a long sentence | A prose sentence → "subject, style, mood, lighting, composition, --ar 16:9 --v 6" |
 
-## 范围类
+## Scope category
 
-| # | 毛病 | 坏例 → 改法 |
+| # | Defect | Bad example → fix |
 |---|---|---|
-| 20 | 无边界 | 「修我的应用」→「只改 `src/auth.js` 的登录校验，其他不动」 |
-| 21 | 无技术约束 | 「写个 React 组件」→「React 18，TS strict，不加外部库，只用 Tailwind」 |
-| 22 | Agent 无停止条件 | 「把功能做完」→ 写停止条件＋里程碑＋验证证据 |
-| 23 | IDE 无文件路径 | 「改登录函数」→「只改 `src/pages/Login.tsx` 的 `handleLogin()`」 |
-| 24 | 模板错配 | GPT 散句塞进 Cursor → 换成七段＋文件范围写法 |
-| 25 | 整库粘贴 | 每轮贴全仓 → 只给相关函数与文件 |
+| 20 | No boundary | "Fix my app" → "Change only the login validation in `src/auth.js`; touch nothing else" |
+| 21 | No technical constraints | "Write a React component" → "React 18, TS strict, no external libraries, Tailwind only" |
+| 22 | Agent with no stop condition | "Finish the feature" → write a stop condition + milestones + verification evidence |
+| 23 | IDE task without file paths | "Change the login function" → "Change only `handleLogin()` in `src/pages/Login.tsx`" |
+| 24 | Template mismatch | GPT prose crammed into Cursor → switch to the seven-section + file-scope style |
+| 25 | Pasting the whole repository | Pasting the whole repo every round → give only the relevant functions and files |
 
-## 推理类
+## Reasoning category
 
-| # | 毛病 | 坏例 → 改法 |
+| # | Defect | Bad example → fix |
 |---|---|---|
-| 26 | 无审计要求 | 「哪个方案好」→ 要结论＋假设＋判据＋证据＋校验＋残余不确定性 |
-| 27 | 要隐藏思维链〔内建〕 | 「展示你的思考过程」→ 删；改为要结论、依据与校验结果 |
-| 28 | 指望跨会话记忆〔内建〕 | 「你知道我项目」→ 每个新会话重发【事实基线】 |
-| 29 | 与旧决策冲突 | 新稿无视已定架构 → 冲突写进【事实基线】再改 |
-| 30 | 事实任务无锚 | 「总结专家对 X 的看法」→「只写有把握的；没把握标 [不确定]」 |
+| 26 | No audit requirement | "Which option is better" → require the conclusion + assumptions + criteria + evidence + verification + residual uncertainty |
+| 27 | Asking to hide the chain of thought〔built-in〕 | "Show your thinking process" → delete it; instead ask for the conclusion, the basis, and the verification results |
+| 28 | Expecting cross-session memory〔built-in〕 | "You know my project" → resend 【Fact Baseline】 in every new session |
+| 29 | Conflict with earlier decisions | The new draft ignores the settled architecture → write the conflict into 【Fact Baseline】 and then revise |
+| 30 | Factual task without anchors | "Summarize what experts think of X" → "Write only what you are sure of; mark what you are unsure of as [Uncertain]" |
 
-## Agent 类
+## Agent category
 
-| # | 毛病 | 坏例 → 改法 |
+| # | Defect | Bad example → fix |
 |---|---|---|
-| 31 | 无起点 | 「给我建个 REST API」→「空 Node 工程，已装 Express，`src/app.js` 存在」 |
-| 32 | 无终点 | 「加鉴权」→「`src/middleware/auth.js` 验 JWT；`src/routes/auth.js` 加 `POST /login`、`/register`」 |
-| 33 | Agent 沉默 | 无进度输出 →「报里程碑、阻塞与最终验证结果」 |
-| 34 | 文件系统全开〔内建〕 | 无文件限制 →「只改 `src/` 内文件，不碰 `package.json`、`.env` 与配置」 |
-| 35 | 无人工闸门 | 全自动决策 →「删文件、加依赖、改库表前先问我」 |
-| 36 | Agent 首轮含糊 | 无范围、文件、验收的「修鉴权 bug」→ 首轮给结果、上下文、文件范围、约束、动作边界、验收标准 |
-| 37 | 长会话上下文腐坏 | 重复纠错但旧假设仍在 → 无关任务开新会话；否则按当前决策压缩上下文；只外包独立的大块调查 |
+| 31 | No starting point | "Build me a REST API" → "Empty Node project, Express installed, `src/app.js` exists" |
+| 32 | No end point | "Add authentication" → "`src/middleware/auth.js` verifies JWT; `src/routes/auth.js` adds `POST /login` and `/register`" |
+| 33 | Silent agent | No progress output → "report milestones, blockers, and the final verification result" |
+| 34 | File system fully open〔built-in〕 | No file restriction → "Change only files under `src/`; do not touch `package.json`, `.env`, or the configuration" |
+| 35 | No human gate | Fully automatic decisions → "ask me before deleting files, adding dependencies, or changing database tables" |
+| 36 | Vague agent first round | "Fix the auth bug" with no scope, files, or acceptance → in the first round give the result, the context, the file scope, the constraints, the action boundaries, and the acceptance criteria |
+| 37 | Context rot in long sessions | Repeated corrections while the old assumptions remain → start a new session for unrelated tasks; otherwise compress the context according to the current decisions; outsource only independent large investigations |

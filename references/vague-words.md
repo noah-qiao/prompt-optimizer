@@ -1,28 +1,28 @@
-# 判定词清单
+# Judgement Word List
 
-自检清单第 3 项读取本文件：逐词搜索优化版全文，命中必须为 0。命中后把该要求改写成可判定的写法（数量、格式、有/无、可复现步骤或 1 个示例），让该词不再出现。
+Item 3 of the self-check list reads this file: search the optimized version word by word, and hits must be 0. After a hit, rewrite that requirement into a judgeable form (quantity, format, presence/absence, reproducible steps, or 1 example) so the word no longer appears.
 
-判定标准：两个读者对它给出的数值或边界可能不同，而全文没有数字、格式或示例把它钉住。
+Judgement criterion: two readers could come up with different values or boundaries for it, while the full text pins it down with no number, format, or example.
 
-| 词 | 为什么无法判定 | 替换写法示例 |
+| Word | Why it cannot be judged | Replacement example |
 |---|---|---|
-| 尽量、尽可能 | 没说做到什么程度算过关 | 写下限：“≤ 300 字”“至少 3 条” |
-| 适当 | 没有给出范围 | “每条回复 1–2 个表情” |
-| 合理 | 没有判断依据 | “数值与【事实基线】第 2 条一致” |
-| 高质量、优质 | 质量没有指标 | “错别字 0 个；每条结论附 1 个出处” |
-| 较好、更好 | 没有比较对象和差距 | “比原文短 50% 以上” |
-| 必要时 | 没有触发条件 | “当输入超过 100 行时” |
-| 相关 | 没有圈定范围 | “仅含‘发货’‘退货’两类问题” |
-| 等等 | 省略了未列出的项 | 列全，或“仅限以下 N 项” |
-| 一些 | 没有数量 | “3 条” |
-| 若干 | 没有数量 | “3–5 条” |
-| 大概 | 没有误差范围 | “200 ± 20 字” |
-| 简洁 | 没有长度标准 | “每条 ≤ 30 字” |
-| 清晰 | 没有可检查特征 | “每段只含 1 个结论，以结论句开头” |
-| 专业 | 没有判断标准 | “用术语表中的 5 个词，不用口语助词” |
-| 足够 | 没有阈值 | “至少 2 个示例” |
-| 及时、尽快 | 没有时限 | “收到后 5 分钟内”“当天 18:00 前” |
-| 酌情、视情况 | 判断留给执行者且无条件 | “若 A 则 X，否则 Y” |
-| 充分 | 没有覆盖标准 | “覆盖纪要中全部 5 个议题” |
-| 完善 | 没有完成标志 | “检查清单 8 项全部打勾” |
-| 常见 | 没有范围和占比 | “限于下列 3 类问题” |
+| as much as possible, as far as possible | Does not say how far counts as passing | Write a lower bound: "≤ 300 characters", "at least 3 items" |
+| appropriate | Gives no range | "1–2 emoji per reply" |
+| reasonable | No basis for judgement | "The value matches item 2 of 【Fact Baseline】" |
+| high quality, excellent | Quality has no metric | "0 typos; attach 1 source to each conclusion" |
+| fairly good, better | No comparison object and no gap | "More than 50% shorter than the original" |
+| when necessary | No trigger condition | "When the input exceeds 100 lines" |
+| related | Does not delimit the scope | "Only the two issue types 'shipping' and 'returns'" |
+| etc. | Omits the items not listed | List them all, or "limited to the following N items" |
+| some | No quantity | "3 items" |
+| several | No quantity | "3–5 items" |
+| approximately | No error range | "200 ± 20 characters" |
+| concise | No length standard | "≤ 30 characters each" |
+| clear | No checkable feature | "Each paragraph contains only 1 conclusion and starts with the conclusion sentence" |
+| professional | No judgement standard | "Use the 5 words from the glossary and no colloquial particles" |
+| sufficient | No threshold | "At least 2 examples" |
+| timely, as soon as possible | No time limit | "Within 5 minutes of receipt", "before 18:00 on the same day" |
+| as appropriate, depending on the situation | Leaves the decision to the executor with no condition | "If A then X, otherwise Y" |
+| adequate | No coverage standard | "Cover all 5 agenda items in the minutes" |
+| complete, polished | No completion marker | "All 8 checklist items ticked" |
+| common | No scope and no proportion | "Limited to the following 3 issue types" |

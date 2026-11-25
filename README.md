@@ -1,4 +1,4 @@
-codeagent 一键安装
+One-click install for codeagent
 ```powershell
 $s = "$env:USERPROFILE\.cac\skills"
 Rename-Item "$s\prompt-optimizer" ("prompt-optimizer.bak-" + (Get-Date -Format 'yyyyMMdd-HHmm'))
